@@ -1,0 +1,92 @@
+body{
+    background: #2f4064;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-family: "Arial";
+    margin-top: 2%;
+}
+
+article{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.all_button{
+	border-radius:9px;
+    -moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	color:#ffffff;
+	font-family:arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:26px 53px;
+	text-decoration:none; 
+
+}
+
+.button {
+/*
+	-moz-box-shadow:inset 0 1px 0 0 #7a8eb9;
+	-webkit-box-shadow:inset 0 1px 0 0 #7a8eb9;
+	box-shadow:inset 0 1px 0 0 #7a8eb9;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #637aad), color-stop(1, #5972a7));
+	background:-moz-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-webkit-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-o-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-ms-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#637aad', endColorstr='#5972a7',GradientType=0);
+*/
+	background-color:#637aad;
+    display:block;
+	border:1px solid #314179;
+    cursor:pointer;
+
+
+}
+
+/*
+.button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5972a7), color-stop(1, #637aad));
+	background:-moz-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-webkit-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-o-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-ms-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5972a7', endColorstr='#637aad',GradientType=0);
+	background-color:#5972a7;
+}
+*/
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.status_open {
+	background-color:#d02e3a;
+    display:block;
+	border:1px solid #5c1a29;
+  
+}
+
+.status_closed {
+    background-color:#2ca335;
+	border:1px solid #1f4a29;
+	display:block;
+
+}
+
+.status_none {
+    background-color:#7e7a78;
+	border:1px solid #444644;
+	display:block;
+}
+
+@media(max-width: 500px){
+    
+}
