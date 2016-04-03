@@ -4,14 +4,18 @@
 
 /*EDIT THESE VARIABLES*/
 //key is the same as your 'access token'
-var key = "1234123412341234123412341234123412341234";
+var key = "xxxxx";
 
 //device_id is the same as the 'core id'
-var device_id = "0123456789abcdef01234567";
+var device_id = "xxxxxx";
 
 //status_check_time is the amount of time in ms that you want 
 //to wait between checking the status of the garage door
-var status_check_time = 15000;
+// this should be a little longer than it takes for your garage door to open/close
+var status_check_time = 30000;
+
+//API call URL
+var api_url = "https://api.particle.io";
 
 /*EDIT ABOVE VARIABLES*/
 
@@ -23,7 +27,7 @@ var debug = 0;
 function ajax_call() {
     "use strict";
     $.ajax({
-        url: "https://api.spark.io/v1/devices/" + device_id + "/status",
+        url: api_url + "/v1/devices/" + device_id + "/status",
         async: false,
         type: "POST",
         data: {access_token: key},
@@ -60,11 +64,17 @@ $(document).ready(function () {
 $(".button").click(function () {
     "use strict";
     $.ajax({
-        url: "https://api.spark.io/v1/devices/" + device_id + "/relay",
+        url: api_url + "/v1/devices/" + device_id + "/relay",
         async: false,
         type: "POST",
         data: {access_token: key}
     });
+	delay_check_status();
 });
 
-setInterval(function () {"use strict"; check_status(); }, status_check_time);
+var delay_check_status = function(){
+	setInterval(function () {
+		check_status(); 
+		console.log('checked status after', status_check_time);
+	}, status_check_time);
+}
